@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local Window = Rayfield:CreateWindow({
-    Name = "*Ziggy's Case Clicker Auto Farm*",
+    Name = "[May 3rd] Ziggy's Case Clicker Auto Farm",
     LoadingTitle = "Ziggy's Case Clicker Auto Farm",
     LoadingSubtitle = "Ziggy#3121",
     ConfigurationSaving = {
