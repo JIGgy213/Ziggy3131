@@ -1,206 +1,18 @@
-function getCurrentPlayerPOS()
-   local plyr = game.Players.LocalPlayer;
-   if plyr.Character then
-       return plyr.Character.HumanoidRootPart.Position;
-   end
-       return false;
-end
-
-function teleportTO(placeCFrame)
-   spawn(function()
-   local plyr = game.Players.LocalPlayer;
-   if plyr.Character then
-       plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-   end
-   end)
-end
-
-
-
-function printStuff()
-   if _G.SelectedOption == "Noob" then
-   print("Noob")
-   end
-end
-
-function TP1()
-   spawn(function()
-   while _G.World1TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World1.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP2()
-   spawn(function()
-   while _G.World2TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World2.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP3()
-   spawn(function()
-   while _G.World3TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World3.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP4()
-   spawn(function()
-   while _G.World4TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World4.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP5()
-   spawn(function()
-   while _G.World5TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World5.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP6()
-   spawn(function()
-   while _G.World6TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World6.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP7()
-   spawn(function()
-   while _G.World7TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World7.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP8()
-   spawn(function()
-   while _G.World8TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World8.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP9()
-   spawn(function()
-   while _G.World9TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World9.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP10()
-   spawn(function()
-   while _G.World10TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World10.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP11()
-   spawn(function()
-   while _G.World11TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World11.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP12()
-   spawn(function()
-   while _G.World12TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World12.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP13()
-   spawn(function()
-   while _G.World13TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World13.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP14()
-   spawn(function()
-   while _G.World14TP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World14.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP15()
-   spawn(function()
-   while _G.RedTowerTP == true do 
-      teleportTO(game:GetService("Workspace").Wins.RedTower.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP16()
-   spawn(function()
-   while _G.WallsTP == true do 
-      teleportTO(game:GetService("Workspace").Wins.Walls.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function TP17()
-   spawn(function()
-   while _G.ObbyTowerTP == true do 
-      teleportTO(game:GetService("Workspace").Wins.World14.CFrame)
-      wait(10)
-      end
-   end)
-end
-
-function autoRebirth()
-   spawn(function()
-      while _G.AutoRebirth == true do
-      game:GetService("ReplicatedStorage"):WaitForChild("RebirthEvent"):FireServer()
-      wait()
-      end
-   end)
-end
-
-
-
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
+
 local Window = Rayfield:CreateWindow({
-    Name = "Ziggy's Every Sec +1 Jump Power Auto Farm",
-    LoadingTitle = "Ziggy's Auto Farm",
-    LoadingSubtitle = "Discord: Ziggy#3121",
+    Name = "*Ziggy's Case Clicker Auto Farm*",
+    LoadingTitle = "Ziggy's Case Clicker Auto Farm",
+    LoadingSubtitle = "Ziggy#3121",
     ConfigurationSaving = {
-       Enabled = false,
+       Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
-       FileName = ""
+       FileName = " Case Clicker By Ziggy#3121 "
     },
     Discord = {
-       Enabled = true,
-       Invite = "33e3ygXb6E", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       Enabled = false,
+       Invite = "33e3ygXb6E", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
        RememberJoins = false -- Set this to false to make them join the discord every time they load it up
     },
     KeySystem = false, -- Set this to true to use our key system
@@ -208,322 +20,621 @@ local Window = Rayfield:CreateWindow({
        Title = "",
        Subtitle = "",
        Note = "",
-       FileName = "", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       FileName = "",
+       SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = {""} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+       Key = ""
     }
  })
 
 Rayfield:Notify({
-    Title = "Made by Ziggy#3121",
-    Content = "E.S.U.G +1 Jump Auto Farm",
+    Title = "Hub Launched",
+    Content = "Case Clicker",
     Duration = 3.5,
-    Image = 0,
     Actions = { -- Notification Buttons
        Ignore = {
-          Name = "CLOSE",
+          Name = "Launched",
           Callback = function()
-          print("Closed")
+          print("close")
        end
     },
  },
  })
 
+ local MainTab = Window:CreateTab("Main") -- Title, Image
 
-local MainTab = Window:CreateTab("Main") -- Title, Image
+ local MainSection = MainTab:CreateSection("Auto Toggles")
 
-local RebirthSection = MainTab:CreateSection("Rebirth")
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Click",
+    CurrentValue = false,
+    Flag = "AutoClick", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 
-local RebirthToggle = MainTab:CreateToggle({
-   Name = "Auto Rebirth",
+        spawn(function()
+    
+            while _G.AutoClick == true do
+                local args = {[1] = "Click"}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoClick = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Auto Claim Completed Mission [1]",
+    CurrentValue = false,
+    Flag = "AutoM1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+    
+            while _G.AutoM1 == true do
+                local args = {[1] = "CompleteMission",[2] = 1}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+    end) -- The function that takes place when the toggle is pressed
+    _G.AutoM1 = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Auto Claim Completed Mission [2]",
+    CurrentValue = false,
+    Flag = "AutoM2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+    
+            while _G.AutoM2 == true do
+                local args = {[1] = "CompleteMission",[2] = 2}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+    end) -- The function that takes place when the toggle is pressed
+    _G.AutoM2 = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Auto Claim Completed Mission [3]",
+    CurrentValue = false,
+    Flag = "AutoM3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+    
+            while _G.AutoM3 == true do
+                local args = {[1] = "CompleteMission",[2] = 3}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+    end) -- The function that takes place when the toggle is pressed
+    _G.AutoM3 = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Redeem Rewards",
+    CurrentValue = false,
+    Flag = "", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        spawn(function()
+            while _G.AutoClaimTimeSpentIGRewards == true do
+                local args = {[1] = "ClaimReward",[2] = {[1] = "300",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("300")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "600",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("600")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "900",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("900")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "1200",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("1200")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "1800",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("1800")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "2400",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("2400")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "3000",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("3000")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "3600",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("3600")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "4500",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("4500")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "5400",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("5400")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "7200",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("7200")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+
+                local args = {[1] = "ClaimReward",[2] = {[1] = "10800",[2] = false,[3] = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game GUI"):FindFirstChild("New Theme"):FindFirstChild("Menu Frames").TimedGifts.Frame.Standard:FindFirstChild("10800")}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+                print("WOOOOOOOOOOOOOOOOO")
+                wait()
+                end
+            end)-- The function that takes place when the toggle is pressed
+    _G.AutoClaimTimeSpentIGRewards = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+
+
+ local Section = MainTab:CreateSection("Auto Upgrades")
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Buy +10$ Per Click Upgrade",
+    CurrentValue = false,
+    Flag = "AutoBuy10PC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        spawn(function()
+
+            while _G.AutoBuy10PC == true do
+                local args = {[1] = "Upgrade",[2] = {[1] = "BuxPerClick",[2] = 1}}
+                game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoBuy10PC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Auto Buy Faster Case Opening",
+    CurrentValue = false,
+    Flag = "AutoBuyCaseSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        spawn(function()
+            while _G.AutoBuyCaseSpeed == true do
+            local args = {[1] = "Upgrade",[2] = {[1] = "CaseSpeed",[2] = 1}}
+            game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoBuyCaseSpeed = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Buy Critical Click",
+    CurrentValue = false,
+    Flag = "AutoBuyCriticalClick", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    spawn(function()
+        while _G.AutoBuyCriticalClick == true do
+            local args = {[1] = "Upgrade",[2] = {[1] = "CBMChance",[2] = 1}}
+            game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+            wait()
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoBuyCriticalClick = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+
+
+ local Toggle = MainTab:CreateToggle({
+   Name = "Auto Buy More Cases Per Click Upgrade",
    CurrentValue = false,
-   Flag = "RebirthToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "AutoBuyMoreCasesUPG", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   autoRebirth()-- The function that takes place when the toggle is pressed
-   _G.AutoRebirth = Value -- The variable (Value) is a boolean on whether the toggle is true or false
+   spawn(function()
+    
+        while _G.AutoBuyMoreCasesUPG == true do
+            local args = {[1] = "Upgrade",[2] = {[1] = "CasesPerClick",[2] = 1}}
+            game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+        wait()
+        end
+    end)-- The function that takes place when the toggle is pressed
+    _G.AutoBuyMoreCasesUPG = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
    end,
 })
 
-local MainSection = MainTab:CreateSection("Auto Farm Wins Section")
+local Toggle = MainTab:CreateToggle({
+    Name = "Auto Buy Click Multiplier Cap Upgrade",
+    CurrentValue = false,
+    Flag = "AutoBuyCUCap", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        spawn(function()
+        while _G.AutoBuyCUCap == true do
+            local args = {[1] = "Upgrade",[2] = {[1] = "MultiplierCap",[2] = 1}}
+            game:GetService("ReplicatedStorage").GameObjects.Remotes.RemoteEvent:FireServer(unpack(args))
+        wait()
+        end
+    end)
+    -- The function that takes place when the toggle is pressed
+    _G.AutoBuyCUCap = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
 
-local Stage1Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 1",
-   CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   TP1()-- The function that takes place when the toggle is pressed
-   _G.World1TP = Value -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
 
-local Stage2Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 2",
-   CurrentValue = false,
-   Flag = "Toggle2", 
-   Callback = function(Value)
-   TP2()
-   _G.World2TP = Value
-   end,
-})
+local AutoOpenTab = Window:CreateTab("Auto Open") -- Title, Image
 
-local Stage3Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 3",
-   CurrentValue = false,
-   Flag = "Toggle3", 
-   Callback = function(Value)
-   TP3()
-   _G.World3TP = Value
-   end,
-})
+local AutoSection = AutoOpenTab:CreateSection("Auto Open Cases")
 
-local Stage4Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 4",
-   CurrentValue = false,
-   Flag = "Toggle4", 
-   Callback = function(Value)
-   TP4()
-   _G.World4TP = Value
-   end,
-})
 
-local Stage5Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 5",
-   CurrentValue = false,
-   Flag = "Toggle5", 
-   Callback = function(Value)
-   TP5()
-   _G.World5TP = Value
-   end,
-})
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 1 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT1C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 
-local Stage6Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 6",
-   CurrentValue = false,
-   Flag = "Toggle6", 
-   Callback = function(Value)
-   TP6()
-   _G.World6TP = Value
-   end,
-})
+        spawn(function()
 
-local Stage7Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 7",
-   CurrentValue = false,
-   Flag = "Toggle7", 
-   Callback = function(Value)
-   TP7()
-   _G.World7TP = Value
-   end,
-})
-
-local Stage8Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 8",
-   CurrentValue = false,
-   Flag = "Toggle8", 
-   Callback = function(Value)
-   TP8()
-   _G.World8TP = Value
-   end,
-})
-
-local Stage9Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 9",
-   CurrentValue = false,
-   Flag = "Toggle9", 
-   Callback = function(Value)
-   TP9()
-   _G.World9TP = Value
-   end,
-})
-
-local Stage10Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 10",
-   CurrentValue = false,
-   Flag = "Toggle10", 
-   Callback = function(Value)
-   TP10()
-   _G.World10TP = Value
-   end,
-})
-
-local Stage11Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 11",
-   CurrentValue = false,
-   Flag = "Toggle11", 
-   Callback = function(Value)
-   TP11()
-   _G.World11TP = Value
-   end,
-})
-
-local Stage12Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 12",
-   CurrentValue = false,
-   Flag = "Toggle12", 
-   Callback = function(Value)
-   TP12()
-   _G.World12TP = Value
-   end,
-})
-
-local Stage13Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 13",
-   CurrentValue = false,
-   Flag = "Toggle13", 
-   Callback = function(Value)
-   TP13()
-   _G.World13TP = Value
-   end,
-})
-
-local Stage14Toggle = MainTab:CreateToggle({
-   Name = "Auto Win World 14",
-   CurrentValue = false,
-   Flag = "Toggle14", 
-   Callback = function(Value)
-   TP14()
-   _G.World14TP = Value
-   end,
-})
-
-local Stage15Toggle = MainTab:CreateToggle({
-   Name = "Auto Win Red Tower",
-   CurrentValue = false,
-   Flag = "Toggle15", 
-   Callback = function(Value)
-   TP15()
-   _G.RedTowerTP = Value
-   end,
-})
-
-local Stage16Toggle = MainTab:CreateToggle({
-   Name = "Auto Win Walls Tower",
-   CurrentValue = false,
-   Flag = "Toggle16", 
-   Callback = function(Value)
-   TP16()
-   _G.WallsTP = Value
-   end,
-})
-
-local Stage17Toggle = MainTab:CreateToggle({
-   Name = "Auto Win Obby Tower",
-   CurrentValue = false,
-   Flag = "Toggle17", 
-   Callback = function(Value)
-   TP17()
-   _G.ObbyTowerTP = Value
-   end,
-})
-
-local EggsTab = Window:CreateTab("Egg Farm") -- Title, Image
-
-local EggsSection = EggsTab:CreateSection("Auto Farm Eggs Section")
-
-local EggsDropdown
-
-_G.AutoOpen = false
-
-EggsDropdown = EggsTab:CreateDropdown({
-    Name = "Auto Farm Egg:",
-    Options = {"NO EGG","Noob","Starter","Rare","Pro","Epic","Legendary","Mythical","Godly","Dark","Void","Desert","Forest","Candy","Steampunk","Beach","Heaven"},
-    CurrentOption = {""},
-    MultipleOptions = false,
-    Flag = "Dropdown1",
-    Callback = function(selectedOptions)
-      if #selectedOptions > 0 then
-            local tpto = selectedOptions[1]
-            getgenv().tppos = tpto
-            teleport()
-            wait(0.1)
-            _G.AutoOpen = true
-      else
-         _G.AutoOpen = false   
-      end
+            while _G.AutoOpenT1C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 1 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT1C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
     end,
 })
 
-function teleport()
-    local EggTeleportsxxx = getgenv().tppos
-    local position = game:GetService("Workspace").Eggs[EggTeleportsxxx].Outline.CFrame
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = position
-end
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 2 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT2C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 
--- Create function for auto farming eggs
-function autoFarmEggs()
-    while true do
-        if _G.AutoOpen then
-            local args = {
-                [1] = getgenv().tppos,
-                [2] = "Single"
-            }
+        spawn(function()
 
-            game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("EggOpened"):InvokeServer(unpack(args))
-            spawn(function()
-             teleport()
-             wait(1)
-            end)
-        end
-        wait(0.2) -- Add a delay to avoid high CPU usage
-    end
-end
-
--- Call autoFarmEggs function using spawn()
-spawn(autoFarmEggs)
-
--- Define autoRedeem function
-function autoRedeem()
-   while _G.AutoRedeem == true do
-    print("autoRedeem function called")
-      local args = {[1] = "TimeGift",[2] = "1"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "2"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "3"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "4"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "5"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "6"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "7"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-      local args = {[1] = "TimeGift",[2] = "8"} 
-      game:GetService("ReplicatedStorage"):WaitForChild("Recv"):InvokeServer(unpack(args))
-      wait(0.5)
-    end
-end
-
-local ExtraTab = Window:CreateTab("Extra") -- Title, Image
-
-local ExtraSection = ExtraTab:CreateSection("Extra things") 
-
-local RedeemToggle = ExtraTab:CreateToggle({ 
-   Name = "Auto Redeem Rewards",
-   CurrentValue = false,
-   Flag = "AutoRedeemToggle",
-   Callback = function(Value)
-   autoRedeem()
-   _G.AutoRedeem = Value
-   end,
+            while _G.AutoOpenT2C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 2 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT2C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
 })
 
-local CredsTab = Window:CreateTab("Credits")
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 3 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT3C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 
-local CreditsSection = CredsTab:CreateSection("Credits")
+        spawn(function()
 
-local LabelMe = CredsTab:CreateLabel("Made by Ziggy#3121 -- parrotman200 (v3rm)")
+            while _G.AutoOpenT3C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 3 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT3C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
 
-local LabelRuntz = CredsTab:CreateLabel("RunTzSploits on YT")
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 4 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT4C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 
-local LabelRayfield = CredsTab:CreateLabel("UI: Rayfield by Sirius")
+        spawn(function()
 
+            while _G.AutoOpenT4C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 4 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT4C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 5 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT5C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT5C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 5 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT5C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 6 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT6C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT6C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 6 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT6C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 7 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT7C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT7C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 7 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT7C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 8 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT8C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT8C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 8 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT8C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 9 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT9C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT9C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 9 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT9C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 10 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT10C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT10C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 10 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT10C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 11 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT11C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT11C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 11 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT11C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 12 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT12C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT12C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 12 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT12C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Tier 13 Case",
+    CurrentValue = false,
+    Flag = "AutoOpenT13C", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenT13C == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Tier 13 Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenT13C = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Unobtainable Case (ROBUX CASE, DONT USE.)",
+    CurrentValue = false,
+    Flag = "AutoOpenUC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenUC == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Unobtainable Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenUC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Ruby Case",
+    CurrentValue = false,
+    Flag = "AutoOpenRC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenRC == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Ruby Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenRC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Golden Case",
+    CurrentValue = false,
+    Flag = "AutoOpenGC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenGC == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Golden Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenGC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Diamond Case",
+    CurrentValue = false,
+    Flag = "AutoOpenDC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenDC == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Diamond Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenDC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local Toggle = AutoOpenTab:CreateToggle({
+    Name = "Auto Open Exotic Case",
+    CurrentValue = false,
+    Flag = "AutoOpenDC", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+
+        spawn(function()
+
+            while _G.AutoOpenEC == true do
+                local args = {
+                    [1] = "OpenCase",[2] = {[1] = "Exotic Case",[2] = false,[3] = 1},[3] = 8418925}
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("GameObjects"):WaitForChild("Remotes"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            wait(0.125)
+            end
+        end)-- The function that takes place when the toggle is pressed
+    _G.AutoOpenEC = (Value)-- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+})
+
+local PlayerTab = Window:CreateTab("Player") -- Title, Image
+
+local PlayerSection = PlayerTab:CreateSection("Auto Toggles")
+
+local Slider = PlayerTab:CreateSlider({
+    Name = "Player Speed",
+    Range = {16, 300},
+    Increment = 10,
+    Suffix = "Walk Speed",
+    CurrentValue = 10,
+    Flag = "Walk_Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)-- The function that takes place when the slider changes
+     -- The variable (Value) is a number which correlates to the value the slider is currently at
+    end,
+})
